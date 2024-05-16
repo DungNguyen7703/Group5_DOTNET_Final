@@ -68,5 +68,10 @@ namespace CAFE
         {
             Application.Exit();
         }
+
+        private void TrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

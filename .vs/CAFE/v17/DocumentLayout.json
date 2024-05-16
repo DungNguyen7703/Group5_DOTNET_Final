@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "D:\\E\\C#\\CAFE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|D:\\E\\C#\\CAFE\\cafe\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|d:\\e\\c#\\cafe\\cafe\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|d:\\e\\c#\\cafe\\cafe\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|d:\\e\\c#\\cafe\\cafe\\timkiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\timkiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|d:\\e\\c#\\cafe\\cafe\\hoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|D:\\E\\C#\\CAFE\\cafe\\hoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\hoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|d:\\e\\c#\\cafe\\cafe\\hoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|D:\\E\\C#\\CAFE\\cafe\\timkiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\timkiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|D:\\E\\C#\\CAFE\\cafe\\hoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{89E4251F-845F-441D-B7F8-A474119876BC}|CAFE\\CAFE.csproj|solutionrelative:cafe\\hoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Timkiem.cs [Design]",
               "DocumentMoniker": "D:\\E\\C#\\CAFE\\CAFE\\Timkiem.cs",
               "RelativeDocumentMoniker": "CAFE\\Timkiem.cs",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Hoadonnhap.cs [Design]",
               "DocumentMoniker": "D:\\E\\C#\\CAFE\\CAFE\\Hoadonnhap.cs",
               "RelativeDocumentMoniker": "CAFE\\Hoadonnhap.cs",
@@ -70,20 +70,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TrangChu.cs",
               "DocumentMoniker": "D:\\E\\C#\\CAFE\\CAFE\\TrangChu.cs",
               "RelativeDocumentMoniker": "CAFE\\TrangChu.cs",
               "ToolTip": "D:\\E\\C#\\CAFE\\CAFE\\TrangChu.cs",
               "RelativeToolTip": "CAFE\\TrangChu.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAvwEQAAAAfAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAvwEkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-15T08:23:23.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TrangChu.cs [Design]",
               "DocumentMoniker": "D:\\E\\C#\\CAFE\\CAFE\\TrangChu.cs",
               "RelativeDocumentMoniker": "CAFE\\TrangChu.cs",
