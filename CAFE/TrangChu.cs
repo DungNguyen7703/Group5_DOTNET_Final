@@ -22,24 +22,6 @@ namespace CAFE
             Application.Exit();
         }
 
-        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Sanpham sp = new Sanpham();
-            sp.Show();
-        }
-
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Nhanvien nv = new Nhanvien();
-            nv.Show();
-        }
-
-        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Khachhang kh = new Khachhang();
-            kh.Show();
-        }
-
         private void bànToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Ban ban = new Ban();
@@ -72,6 +54,24 @@ namespace CAFE
         private void TrangChu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void nhânViênToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Nhanvien nv = new Nhanvien();
+            nv.Show();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Khachhang kh = new Khachhang();
+            kh.Show();
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Sanpham sp = new Sanpham();
+            sp.Show();
         }
     }
 }
