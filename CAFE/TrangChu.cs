@@ -2,76 +2,141 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAFE.CLass;
 
 namespace CAFE
 {
-    public partial class TrangChu : Form
+    public partial class Trangchu : Form
     {
-        public TrangChu()
+        bool menuExpand = false;
+        bool sidebarExpand = false;
+        public Trangchu()
         {
             InitializeComponent();
-        }
-
-        private void đóngToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void bànToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Ban ban = new Ban();
-            ban.Show();
-        }
-
-        private void hóaĐơnNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hoadonnhap hdn = new Hoadonnhap();
-            hdn.Show();
-        }
-
-        private void hóaĐơnBánToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hoadonban hdb = new Hoadonban();
-            hdb.Show();
-        }
-
-        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Timkiem tk = new Timkiem();
-            tk.Show();
-        }
-
-        private void đóngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void TrangChu_Load(object sender, EventArgs e)
-        {
 
         }
 
-        private void nhânViênToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void menuTrans_Tick(object sender, EventArgs e)
         {
-            Nhanvien nv = new Nhanvien();
-            nv.Show();
+            if (menuExpand == false)
+            {
+                pnList.Height += 10;
+                if (pnList.Height >= 282)
+                {
+                    menuTrans.Stop();
+                    menuExpand = true;
+                }
+            }
+            else
+            {
+                pnList.Height -= 10;
+                if (pnList.Height <= 54)
+                {
+                    menuTrans.Stop();
+                    menuExpand = false;
+                }
+            }
         }
 
-        private void kháchHàngToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void danhmuc_Click(object sender, EventArgs e)
         {
-            Khachhang kh = new Khachhang();
-            kh.Show();
+            menuTrans.Start();
         }
 
-        private void sảnPhẩmToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void sidebarTrans_Tick(object sender, EventArgs e)
         {
-            Sanpham sp = new Sanpham();
-            sp.Show();
+            if (sidebarExpand)
+            {
+                sideBar.Width -= 10;
+                if (sideBar.Width <= 65)
+                {
+                    sidebarTrans.Stop();
+                    sidebarExpand = false;
+                }
+            }
+            else
+            {
+                sideBar.Width += 10;
+                if (sideBar.Width >= 208)
+                {
+                    sidebarTrans.Stop();
+                    sidebarExpand = true;
+                }
+/*                pnHome.Width= pnDash.Width = pnList.Width = pnImport.Width = pnBills.Width = pnTable.Width = sideBar.Width;
+*/            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Nhanvien nhanvien = new Nhanvien();
+            nhanvien.Owner = this;
+            nhanvien.Show();
+        }
+
+        private void btnSidebar_Click(object sender, EventArgs e)
+        {
+            sidebarTrans.Start();   
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCLose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            HoadonBan hoadonBan = new HoadonBan();
+            hoadonBan.TopLevel = false;
+            /*hoadonBan.FormBorderStyle = FormBorderStyle.None;*/
+            hoadonBan.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(hoadonBan);
+            hoadonBan.Show();
+        }
+
+        private void pnMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sideBar_Paint(object sender, PaintEventArgs e)
+        {
+            sideBar.BringToFront();
         }
     }
 }

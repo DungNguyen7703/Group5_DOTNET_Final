@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAFE
 {
-    public partial class Hoadonban : Form
+    public partial class HoadonBan : Form
     {
-        public Hoadonban()
+        public HoadonBan()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAFE
 {
-    public partial class Hoadonnhap : Form
+    public partial class HoadonNhap : Form
     {
-        public Hoadonnhap()
+        public HoadonNhap()
         {
             InitializeComponent();
         }
