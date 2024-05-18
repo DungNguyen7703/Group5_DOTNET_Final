@@ -56,7 +56,6 @@
             this.btnImport = new System.Windows.Forms.Button();
             this.menuTrans = new System.Windows.Forms.Timer(this.components);
             this.sidebarTrans = new System.Windows.Forms.Timer(this.components);
-            this.pnMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCLose)).BeginInit();
@@ -118,7 +117,7 @@
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 40);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(66, 535);
+            this.sideBar.Size = new System.Drawing.Size(66, 651);
             this.sideBar.TabIndex = 1;
             this.sideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.sideBar_Paint);
             // 
@@ -183,7 +182,7 @@
             this.pnList.Location = new System.Drawing.Point(0, 120);
             this.pnList.Margin = new System.Windows.Forms.Padding(0);
             this.pnList.Name = "pnList";
-            this.pnList.Size = new System.Drawing.Size(200, 46);
+            this.pnList.Size = new System.Drawing.Size(200, 50);
             this.pnList.TabIndex = 8;
             // 
             // panel12
@@ -317,7 +316,7 @@
             // pnBills
             // 
             this.pnBills.Controls.Add(this.btnBill);
-            this.pnBills.Location = new System.Drawing.Point(3, 169);
+            this.pnBills.Location = new System.Drawing.Point(3, 173);
             this.pnBills.Name = "pnBills";
             this.pnBills.Size = new System.Drawing.Size(200, 54);
             this.pnBills.TabIndex = 5;
@@ -341,7 +340,7 @@
             // pnTable
             // 
             this.pnTable.Controls.Add(this.btnTable);
-            this.pnTable.Location = new System.Drawing.Point(3, 229);
+            this.pnTable.Location = new System.Drawing.Point(3, 233);
             this.pnTable.Name = "pnTable";
             this.pnTable.Size = new System.Drawing.Size(200, 54);
             this.pnTable.TabIndex = 4;
@@ -365,7 +364,7 @@
             // pnImport
             // 
             this.pnImport.Controls.Add(this.btnImport);
-            this.pnImport.Location = new System.Drawing.Point(3, 289);
+            this.pnImport.Location = new System.Drawing.Point(3, 293);
             this.pnImport.Name = "pnImport";
             this.pnImport.Size = new System.Drawing.Size(200, 54);
             this.pnImport.TabIndex = 4;
@@ -384,6 +383,7 @@
             this.btnImport.TabIndex = 3;
             this.btnImport.Text = "     Hóa đơn nhập";
             this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // menuTrans
             // 
@@ -395,25 +395,17 @@
             this.sidebarTrans.Interval = 10;
             this.sidebarTrans.Tick += new System.EventHandler(this.sidebarTrans_Tick);
             // 
-            // pnMain
-            // 
-            this.pnMain.Location = new System.Drawing.Point(69, 41);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(925, 534);
-            this.pnMain.TabIndex = 2;
-            this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
-            // 
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 575);
-            this.Controls.Add(this.pnMain);
+            this.ClientSize = new System.Drawing.Size(994, 691);
             this.Controls.Add(this.sideBar);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "Trangchu";
             this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.Trangchu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCLose)).EndInit();
@@ -462,7 +454,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btnSup;
         private System.Windows.Forms.PictureBox btnCLose;
-        private System.Windows.Forms.Panel pnMain;
     }
 }
 

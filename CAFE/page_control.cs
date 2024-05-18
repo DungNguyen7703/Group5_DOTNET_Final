@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CAFE
 {
-    public partial class HoadonBan : Form
+    public partial class page_control : UserControl
     {
-        public HoadonBan()
+        public page_control()
         {
             InitializeComponent();
         }
 
-        private void HoadonBan_FormClosed(object sender, FormClosedEventArgs e)
+        private void page_control_Load(object sender, EventArgs e)
         {
 
         }

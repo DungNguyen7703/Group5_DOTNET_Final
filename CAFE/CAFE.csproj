@@ -83,6 +83,12 @@
     <Compile Include="Nhanvien.Designer.cs">
       <DependentUpon>Nhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="page_control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="page_control.Designer.cs">
+      <DependentUpon>page_control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sanpham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +103,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HoadonBan.resx">
+      <DependentUpon>HoadonBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoadonNhap.resx">
       <DependentUpon>HoadonNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nhanvien.resx">
       <DependentUpon>Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page_control.resx">
+      <DependentUpon>page_control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>
