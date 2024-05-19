@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CAFE
 {
-    public partial class page_control : UserControl
+    public partial class Timkiem : Form
     {
-        public page_control()
+        public Timkiem()
         {
             InitializeComponent();
-        }
-
-        private void page_control_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -23,13 +23,20 @@ namespace CAFE
         Sanpham sp;
         HoadonBan hoadonBan;
         HoadonNhap hoadonNhap;
+        Thongke tk;
+        Timkiem Timkiem;
 
         public Trangchu()
         {
             InitializeComponent();
-
+            mdiProp();
         }
-
+        
+        private void mdiProp()
+        {
+            this.SetBevel(false);
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232,234,237);
+        }   
         private void menuTrans_Tick(object sender, EventArgs e)
         {
             if (menuExpand == false)
@@ -180,7 +187,7 @@ namespace CAFE
             {
                 trangchu = new Trangchu();
                 trangchu.FormClosed += Trangchu_FormClosed;
-                trangchu.MdiParent = this;
+                trangchu.MdiParent = trangchu;
                 trangchu.Show();
             }
             else
@@ -196,7 +203,22 @@ namespace CAFE
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            
+            if (tk == null)
+            {
+                tk  = new Thongke();
+                tk.FormClosed += Thongke_FormClosed;
+                tk.MdiParent = this;
+                tk.Dock = DockStyle.Fill;
+                tk.Show();
+            } else
+            {
+                tk.Activate();
+            }
+        }
+
+        private void Thongke_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tk = null;
         }
 
         private void btnBill_Click(object sender, EventArgs e)
@@ -250,6 +272,27 @@ namespace CAFE
         private void HoadonBan_FormClosed(object sender, FormClosedEventArgs e)
         {
             hoadonBan = null;
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if (Timkiem == null)
+            {
+                Timkiem = new Timkiem();
+                Timkiem.FormClosed += Timkiem_FormClosed;
+                Timkiem.MdiParent = this;
+                Timkiem.Dock = DockStyle.Fill;
+                Timkiem.Show();
+            }
+            else
+            {
+                Timkiem.Activate();
+            }
+        }
+
+        private void Timkiem_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Timkiem = null;
         }
     }
 }

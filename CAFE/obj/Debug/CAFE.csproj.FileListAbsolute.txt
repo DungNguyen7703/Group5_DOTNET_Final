@@ -10,5 +10,6 @@ D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.exe
 D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.pdb
 D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.Nhanvien.resources
 D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.HoadonNhap.resources
-D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.page_control.resources
 D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.HoadonBan.resources
+D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.Thongke.resources
+D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.Timkiem.resources
