@@ -58,7 +58,6 @@ namespace CAFE
                 }
             }
         }
-
         private void danhmuc_Click(object sender, EventArgs e)
         {
             menuTrans.Start();
@@ -293,6 +292,38 @@ namespace CAFE
         private void Timkiem_FormClosed(object sender, FormClosedEventArgs e)
         {
             Timkiem = null;
+        }
+
+        private void btnbaocaoban_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnbaocao_Click(object sender, EventArgs e)
+        {
+            baocaoTrans.Start();
+        }
+
+        private void baocaoTrans_Tick(object sender, EventArgs e)
+        {
+            if ( menuExpand == false)
+            {
+                baocaoExpand.Height += 10;
+                if (baocaoExpand.Height >= 175)
+                {
+                    baocaoTrans.Stop();
+                    menuExpand = true;
+                }
+            }
+            else
+            {
+                baocaoExpand.Height -= 10;
+                if (baocaoExpand.Height <= 50)
+                {
+                    baocaoTrans.Stop();
+                    menuExpand = false;
+                }
+            }
         }
     }
 }
