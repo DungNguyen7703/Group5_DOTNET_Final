@@ -23,8 +23,10 @@ namespace CAFE
         Sanpham sp;
         HoadonBan hoadonBan;
         HoadonNhap hoadonNhap;
-        Thongke tk;
+        BaocaoBan tk;
         Timkiem Timkiem;
+        BaocaoBan BCban;
+        BaocaoNhap BCnhap;
 
         public Trangchu()
         {
@@ -42,7 +44,7 @@ namespace CAFE
             if (menuExpand == false)
             {
                 pnList.Height += 20;
-                if (pnList.Height >= 282)
+                if (pnList.Height >= 276)
                 {
                     menuTrans.Stop();
                     menuExpand = true;
@@ -146,6 +148,7 @@ namespace CAFE
                 kh.FormClosed += Kh_FormClosed;
                 kh.MdiParent = this;
                 kh.Dock = DockStyle.Fill;
+                ActiveMdiChild.Close();
                 kh.Show();
             }
             else
@@ -182,7 +185,7 @@ namespace CAFE
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if (trangchu == null)
+/*            if (trangchu == null)
             {
                 trangchu = new Trangchu();
                 trangchu.FormClosed += Trangchu_FormClosed;
@@ -192,7 +195,7 @@ namespace CAFE
             else
             {
                 trangchu.Activate();
-            }
+            }*/
         }
 
         private void Trangchu_FormClosed(object sender, FormClosedEventArgs e)
@@ -200,20 +203,7 @@ namespace CAFE
             trangchu = null;
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            if (tk == null)
-            {
-                tk  = new Thongke();
-                tk.FormClosed += Thongke_FormClosed;
-                tk.MdiParent = this;
-                tk.Dock = DockStyle.Fill;
-                tk.Show();
-            } else
-            {
-                tk.Activate();
-            }
-        }
+
 
         private void Thongke_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -296,7 +286,23 @@ namespace CAFE
 
         private void btnbaocaoban_Click(object sender, EventArgs e)
         {
+            if (BCban == null)
+            {
+                BCban = new BaocaoBan();
+                BCban.FormClosed += BCban_FormClosed;
+                BCban.MdiParent = this;
+                BCban.Dock = DockStyle.Fill;
+                BCban.Show();
+            }
+            else
+            {
+                BCban.Activate();
+            }
+        }
 
+        private void BCban_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            BCban = null;
         }
 
         private void btnbaocao_Click(object sender, EventArgs e)
@@ -309,7 +315,7 @@ namespace CAFE
             if ( menuExpand == false)
             {
                 baocaoExpand.Height += 10;
-                if (baocaoExpand.Height >= 175)
+                if (baocaoExpand.Height >= 172)
                 {
                     baocaoTrans.Stop();
                     menuExpand = true;
@@ -318,12 +324,38 @@ namespace CAFE
             else
             {
                 baocaoExpand.Height -= 10;
-                if (baocaoExpand.Height <= 50)
+                if (baocaoExpand.Height <= 52)
                 {
                     baocaoTrans.Stop();
                     menuExpand = false;
                 }
             }
+        }
+
+        private void bthbaocaonhap_Click(object sender, EventArgs e)
+        {
+            if (BCnhap == null)
+            {
+                BCnhap = new BaocaoNhap();
+                BCnhap.FormClosed += BCnhap_FormClosed;
+                BCnhap.MdiParent = this;
+                BCnhap.Dock = DockStyle.Fill;
+                BCnhap.Show();
+            }
+            else
+            {
+                BCnhap.Activate();
+            }
+        }
+
+        private void BCnhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            BCnhap = null;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

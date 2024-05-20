@@ -32,22 +32,23 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnHome = new System.Windows.Forms.Panel();
+            this.baocaoExpand = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.pnList = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pnImport = new System.Windows.Forms.Panel();
             this.pnBills = new System.Windows.Forms.Panel();
+            this.pnImport = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuTrans = new System.Windows.Forms.Timer(this.components);
             this.sidebarTrans = new System.Windows.Forms.Timer(this.components);
-            this.baocaoExpand = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.baocaoTrans = new System.Windows.Forms.Timer(this.components);
+            this.btnHome = new System.Windows.Forms.Button();
             this.bthbaocaonhap = new System.Windows.Forms.Button();
             this.btnbaocaoban = new System.Windows.Forms.Button();
             this.btnbaocao = new System.Windows.Forms.Button();
@@ -56,28 +57,27 @@
             this.btnCus = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.btnSidebar = new System.Windows.Forms.PictureBox();
             this.btnCLose = new System.Windows.Forms.PictureBox();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.btnTimkiem = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
+            this.btnTimkiem = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.sideBar.SuspendLayout();
             this.pnHome.SuspendLayout();
+            this.baocaoExpand.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.pnList.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.pnImport.SuspendLayout();
             this.pnBills.SuspendLayout();
+            this.pnImport.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.baocaoExpand.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCLose)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(994, 40);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // sideBar
             // 
@@ -116,6 +117,43 @@
             this.pnHome.Name = "pnHome";
             this.pnHome.Size = new System.Drawing.Size(200, 54);
             this.pnHome.TabIndex = 2;
+            // 
+            // baocaoExpand
+            // 
+            this.baocaoExpand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.baocaoExpand.Controls.Add(this.panel10);
+            this.baocaoExpand.Controls.Add(this.panel11);
+            this.baocaoExpand.Controls.Add(this.panel13);
+            this.baocaoExpand.Location = new System.Drawing.Point(0, 60);
+            this.baocaoExpand.Margin = new System.Windows.Forms.Padding(0);
+            this.baocaoExpand.Name = "baocaoExpand";
+            this.baocaoExpand.Size = new System.Drawing.Size(200, 50);
+            this.baocaoExpand.TabIndex = 9;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.bthbaocaonhap);
+            this.panel10.Location = new System.Drawing.Point(0, 113);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 54);
+            this.panel10.TabIndex = 16;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnbaocaoban);
+            this.panel11.Location = new System.Drawing.Point(3, 56);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(200, 54);
+            this.panel11.TabIndex = 14;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnbaocao);
+            this.panel13.Location = new System.Drawing.Point(0, -4);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 54);
+            this.panel13.TabIndex = 4;
             // 
             // pnList
             // 
@@ -174,14 +212,6 @@
             this.panel4.Size = new System.Drawing.Size(200, 54);
             this.panel4.TabIndex = 4;
             // 
-            // pnImport
-            // 
-            this.pnImport.Controls.Add(this.btnImport);
-            this.pnImport.Location = new System.Drawing.Point(3, 223);
-            this.pnImport.Name = "pnImport";
-            this.pnImport.Size = new System.Drawing.Size(200, 54);
-            this.pnImport.TabIndex = 4;
-            // 
             // pnBills
             // 
             this.pnBills.Controls.Add(this.btnBill);
@@ -189,6 +219,14 @@
             this.pnBills.Name = "pnBills";
             this.pnBills.Size = new System.Drawing.Size(200, 54);
             this.pnBills.TabIndex = 5;
+            // 
+            // pnImport
+            // 
+            this.pnImport.Controls.Add(this.btnImport);
+            this.pnImport.Location = new System.Drawing.Point(3, 223);
+            this.pnImport.Name = "pnImport";
+            this.pnImport.Size = new System.Drawing.Size(200, 54);
+            this.pnImport.TabIndex = 4;
             // 
             // panel2
             // 
@@ -200,7 +238,7 @@
             // 
             // menuTrans
             // 
-            this.menuTrans.Interval = 50;
+            this.menuTrans.Interval = 20;
             this.menuTrans.Tick += new System.EventHandler(this.menuTrans_Tick);
             // 
             // sidebarTrans
@@ -208,75 +246,56 @@
             this.sidebarTrans.Interval = 10;
             this.sidebarTrans.Tick += new System.EventHandler(this.sidebarTrans_Tick);
             // 
-            // baocaoExpand
-            // 
-            this.baocaoExpand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.baocaoExpand.Controls.Add(this.panel10);
-            this.baocaoExpand.Controls.Add(this.panel11);
-            this.baocaoExpand.Controls.Add(this.panel13);
-            this.baocaoExpand.Location = new System.Drawing.Point(0, 60);
-            this.baocaoExpand.Margin = new System.Windows.Forms.Padding(0);
-            this.baocaoExpand.Name = "baocaoExpand";
-            this.baocaoExpand.Size = new System.Drawing.Size(200, 50);
-            this.baocaoExpand.TabIndex = 9;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.bthbaocaonhap);
-            this.panel10.Location = new System.Drawing.Point(0, 113);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(200, 54);
-            this.panel10.TabIndex = 16;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btnbaocaoban);
-            this.panel11.Location = new System.Drawing.Point(3, 56);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(200, 54);
-            this.panel11.TabIndex = 14;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.btnbaocao);
-            this.panel13.Location = new System.Drawing.Point(0, -4);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(200, 54);
-            this.panel13.TabIndex = 4;
-            // 
             // baocaoTrans
             // 
-            this.baocaoTrans.Interval = 10;
+            this.baocaoTrans.Interval = 20;
             this.baocaoTrans.Tick += new System.EventHandler(this.baocaoTrans_Tick);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::CAFE.Properties.Resources.icons8_home_32;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(-7, -12);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(216, 77);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "Trang chủ";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // bthbaocaonhap
             // 
             this.bthbaocaonhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.bthbaocaonhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bthbaocaonhap.ForeColor = System.Drawing.Color.White;
-            this.bthbaocaonhap.Image = global::CAFE.Properties.Resources.icons8_customer_50;
+            this.bthbaocaonhap.Image = global::CAFE.Properties.Resources.icons8_bill_30;
             this.bthbaocaonhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bthbaocaonhap.Location = new System.Drawing.Point(-12, -12);
             this.bthbaocaonhap.Margin = new System.Windows.Forms.Padding(0);
             this.bthbaocaonhap.Name = "bthbaocaonhap";
-            this.bthbaocaonhap.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.bthbaocaonhap.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.bthbaocaonhap.Size = new System.Drawing.Size(216, 77);
             this.bthbaocaonhap.TabIndex = 3;
             this.bthbaocaonhap.Text = "         BC nhập hàng";
             this.bthbaocaonhap.UseVisualStyleBackColor = false;
+            this.bthbaocaonhap.Click += new System.EventHandler(this.bthbaocaonhap_Click);
             // 
             // btnbaocaoban
             // 
             this.btnbaocaoban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.btnbaocaoban.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnbaocaoban.ForeColor = System.Drawing.Color.White;
-            this.btnbaocaoban.Image = global::CAFE.Properties.Resources.icons8_coffee_48;
+            this.btnbaocaoban.Image = global::CAFE.Properties.Resources.icons8_report_30;
             this.btnbaocaoban.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnbaocaoban.Location = new System.Drawing.Point(-15, -12);
             this.btnbaocaoban.Margin = new System.Windows.Forms.Padding(0);
             this.btnbaocaoban.Name = "btnbaocaoban";
-            this.btnbaocaoban.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnbaocaoban.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnbaocaoban.Size = new System.Drawing.Size(216, 77);
             this.btnbaocaoban.TabIndex = 3;
             this.btnbaocaoban.Text = "           BC bán hàng";
@@ -288,7 +307,7 @@
             this.btnbaocao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.btnbaocao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnbaocao.ForeColor = System.Drawing.Color.White;
-            this.btnbaocao.Image = global::CAFE.Properties.Resources.icons8_report_30;
+            this.btnbaocao.Image = global::CAFE.Properties.Resources.icons8_dropdown_30;
             this.btnbaocao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnbaocao.Location = new System.Drawing.Point(-4, -12);
             this.btnbaocao.Margin = new System.Windows.Forms.Padding(0);
@@ -385,23 +404,6 @@
             this.btnList.UseVisualStyleBackColor = false;
             this.btnList.Click += new System.EventHandler(this.danhmuc_Click);
             // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::CAFE.Properties.Resources.icons8_home_32;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(-7, -12);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(216, 77);
-            this.btnHome.TabIndex = 3;
-            this.btnHome.Text = "Trang chủ";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // btnSidebar
             // 
             this.btnSidebar.Image = global::CAFE.Properties.Resources.icons8_menu_32;
@@ -424,21 +426,21 @@
             this.btnCLose.TabStop = false;
             this.btnCLose.Click += new System.EventHandler(this.btnCLose_Click);
             // 
-            // btnImport
+            // btnBill
             // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Image = global::CAFE.Properties.Resources.icons8_import_30;
-            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.Location = new System.Drawing.Point(-7, -12);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnImport.Size = new System.Drawing.Size(216, 77);
-            this.btnImport.TabIndex = 3;
-            this.btnImport.Text = "     Hóa đơn nhập";
-            this.btnImport.UseVisualStyleBackColor = false;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnBill.ForeColor = System.Drawing.Color.White;
+            this.btnBill.Image = global::CAFE.Properties.Resources.icons8_bill_30;
+            this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBill.Location = new System.Drawing.Point(-9, -12);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnBill.Size = new System.Drawing.Size(216, 77);
+            this.btnBill.TabIndex = 3;
+            this.btnBill.Text = "     Hóa đơn bán";
+            this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnTimkiem
             // 
@@ -457,21 +459,21 @@
             this.btnTimkiem.UseVisualStyleBackColor = false;
             this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
-            // btnBill
+            // btnImport
             // 
-            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.btnBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnBill.ForeColor = System.Drawing.Color.White;
-            this.btnBill.Image = global::CAFE.Properties.Resources.icons8_bill_30;
-            this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(-9, -12);
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(216, 77);
-            this.btnBill.TabIndex = 3;
-            this.btnBill.Text = "     Hóa đơn bán";
-            this.btnBill.UseVisualStyleBackColor = false;
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Image = global::CAFE.Properties.Resources.icons8_import_30;
+            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.Location = new System.Drawing.Point(-7, -12);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnImport.Size = new System.Drawing.Size(216, 77);
+            this.btnImport.TabIndex = 3;
+            this.btnImport.Text = "     Hóa đơn nhập";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // Trangchu
             // 
@@ -488,19 +490,19 @@
             this.panel1.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
             this.pnHome.ResumeLayout(false);
+            this.baocaoExpand.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.pnList.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.pnImport.ResumeLayout(false);
             this.pnBills.ResumeLayout(false);
+            this.pnImport.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.baocaoExpand.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCLose)).EndInit();
             this.ResumeLayout(false);

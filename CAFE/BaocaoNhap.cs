@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAFE
 {
-    public partial class Thongke : Form
+    public partial class BaocaoNhap : Form
     {
-        public Thongke()
+        public BaocaoNhap()
         {
             InitializeComponent();
         }

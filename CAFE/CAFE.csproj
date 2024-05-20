@@ -52,6 +52,18 @@
     <Compile Include="Ban.Designer.cs">
       <DependentUpon>Ban.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaocaoBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaocaoBan.Designer.cs">
+      <DependentUpon>BaocaoBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaocaoNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaocaoNhap.Designer.cs">
+      <DependentUpon>BaocaoNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="CLass\Functions.cs" />
     <Compile Include="HoadonBan.cs">
       <SubType>Form</SubType>
@@ -90,12 +102,6 @@
     <Compile Include="Sanpham.Designer.cs">
       <DependentUpon>Sanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thongke.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Thongke.Designer.cs">
-      <DependentUpon>Thongke.cs</DependentUpon>
-    </Compile>
     <Compile Include="Timkiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nhanvien.resx">
       <DependentUpon>Nhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Thongke.resx">
-      <DependentUpon>Thongke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Timkiem.resx">
       <DependentUpon>Timkiem.cs</DependentUpon>
@@ -204,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-report-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
