@@ -58,6 +58,32 @@ CREATE TABLE SanPham (
     FOREIGN KEY (MaLoai) REFERENCES Loai(MaLoai)
 );
 
+-- Tạo bảng CongDung
+CREATE TABLE CongDung (
+    MaCongDung VARCHAR(10) PRIMARY KEY,
+    TenCongDung NVARCHAR(100)
+);
+
+-- Sửa bảng SanPham để thêm thuộc tính MaCongDung
+ALTER TABLE SanPham
+ADD MaCongDung VARCHAR(10);
+
+-- Tạo khóa ngoại giữa SanPham và CongDung
+ALTER TABLE SanPham
+ADD CONSTRAINT FK_SanPham_CongDung FOREIGN KEY (MaCongDung)
+REFERENCES CongDung (MaCongDung);
+
+-- Giá bán bằng 110% đơn giá
+UPDATE SanPham
+SET GiaBan = (
+    SELECT DonGia * 1.1
+    FROM ChiTietHDN
+    WHERE ChiTietHDN.MaSanPham = SanPham.MaSanPham
+);
+
+--Thêm thuộc tính Giá Nhập
+ALTER TABLE SanPham
+ADD GiaNhap FLOAT; 
 
 -- Bảng Loai
 CREATE TABLE Loai (
@@ -98,74 +124,104 @@ CREATE TABLE Que (
     MaQue VARCHAR(10) PRIMARY KEY,
     TenQue NVARCHAR(50) NOT NULL
 );
---Bảng quê
+
+
+-- Chèn lại dữ liệu 
+-- Bảng Que
 INSERT INTO Que (MaQue, TenQue) VALUES ('Q01', 'Hà Nội');
-INSERT INTO Que (MaQue, TenQue) VALUES ('Q02', 'Hồ Chí Minh');
+INSERT INTO Que (MaQue, TenQue) VALUES ('Q02', 'Bắc Ninh');
 
---Bảng nhân viên
+-- Bảng NhanVien
 INSERT INTO NhanVien (MaNhanVien, TenNhanVien, DiaChi, MaQue, NgaySinh, GioiTinh, SoDienThoai) 
-VALUES ('NV01', 'Nguyễn Văn A', '123 Đường A, Hà Nội', 'Q01', '1985-05-01', 'Nam', '0912345678');
-
+VALUES ('NV01', 'Nguyễn Văn Bình', '123 Kim Giang, Hà Nội', 'Q01', '1985-05-01', 'Nam', '0912345678');
 INSERT INTO NhanVien (MaNhanVien, TenNhanVien, DiaChi, MaQue, NgaySinh, GioiTinh, SoDienThoai) 
-VALUES ('NV02', 'Trần Thị B', '20 Láng, Hà Nội', 'Q02', '1990-08-15', 'Nữ', '0987654321');
+VALUES ('NV02', 'Trần Thị Lanh', '20 Láng, Hà Nội', 'Q02', '1990-08-15', 'Nữ', '0987654321');
 
---Khách hàng
+-- Bảng KhachHang
 INSERT INTO KhachHang (MaKhachHang, TenKhachHang, DiaChi, SoDienThoai)
-VALUES ('KH01', 'Lê Văn C', '789 Đường C, Đà Nẵng', '0934567890');
-
+VALUES ('KH01', 'Lê Văn C', '789 Láng, Hà Nội', '0934567890');
 INSERT INTO KhachHang (MaKhachHang, TenKhachHang, DiaChi, SoDienThoai)
-VALUES ('KH02', 'Phạm Thị D', '321 Đường D, Hải Phòng', '0923456789');
+VALUES ('KH02', 'Phạm Thị D', '321 Tây Sơn, Hà Nội', '0923456789');
 
---Nhà CC
+-- Bảng NhaCungCap
 INSERT INTO NhaCungCap (MaNhaCungCap, TenNhaCungCap, DiaChi, SoDienThoai)
-VALUES ('NCC01', 'Công ty ABC', 'Số 1, Đường ABC, Hà Nội', '0901234567');
-
+VALUES ('NCC01', 'Công ty ABC', 'Số 1, Trường Chinh, Hà Nội', '0901234567');
 INSERT INTO NhaCungCap (MaNhaCungCap, TenNhaCungCap, DiaChi, SoDienThoai)
-VALUES ('NCC02', 'Công ty XYZ', 'Số 2, Đường XYZ, Hồ Chí Minh', '0907654321');
+VALUES ('NCC02', 'Công ty XYZ', 'Số 2, Chùa Bộc, Hà Nội', '0907654321');
 
---Loại
+-- Bảng Loai
 INSERT INTO Loai (MaLoai, TenLoai)
 VALUES ('L01', 'Cafe');
-
 INSERT INTO Loai (MaLoai, TenLoai)
 VALUES ('L02', 'Sinh tố');
 
---Sản phẩm
-INSERT INTO SanPham (MaSanPham, TenSanPham, MaLoai, GiaBan, SoLuong, HinhAnh)
-VALUES ('SP03', 'Cà phê nâu', 'L01', 30000, 100, 'cafenau.jpg');
+-- Bảng CongDung
+INSERT INTO CongDung (MaCongDung, TenCongDung) VALUES ('CD01', 'Đồ uống pha chế');
+INSERT INTO CongDung (MaCongDung, TenCongDung) VALUES ('CD02', 'Nguyên liệu');
 
-INSERT INTO SanPham (MaSanPham, TenSanPham, MaLoai, GiaBan, SoLuong, HinhAnh)
-VALUES ('SP04', 'Sinh tố ', 'L02', 50000, 150, 'sinhtobo.jpg');
+-- Bảng SanPham
+INSERT INTO SanPham (MaSanPham, TenSanPham, MaLoai, GiaBan, SoLuong, HinhAnh, MaCongDung, GiaNhap)
+VALUES ('SP03', 'Cà phê nâu', 'L01', 30000, 100, 'cafenau.jpg', 'CD01', 20000);
+INSERT INTO SanPham (MaSanPham, TenSanPham, MaLoai, GiaBan, SoLuong, HinhAnh, MaCongDung, GiaNhap)
+VALUES ('SP04', 'Sinh tố', 'L02', 50000, 150, 'sinhtobo.jpg', 'CD01', 30000);
 
---Hóa đơn
+-- Bảng HoaDon
 INSERT INTO HoaDon (MaHoaDon, MaKhachHang, MaNhanVien, NgayBan, TongTien)
 VALUES ('HD01', 'KH01', 'NV01', '2023-05-01', 60000);
-
 INSERT INTO HoaDon (MaHoaDon, MaKhachHang, MaNhanVien, NgayBan, TongTien)
 VALUES ('HD02', 'KH02', 'NV02', '2023-05-02', 100000);
 
---Chi tiết hóa đơn 
+-- Bảng ChiTietHDB
 INSERT INTO ChiTietHDB (MaHoaDon, MaSanPham, SoLuong, ThanhTien, KhuyenMai, GhiChu)
-VALUES ('HD01', 'SP03', 2, 60000, 'Giảm giá 10%', 'Không ghi chú');
-
+VALUES ('HD01', 'SP03', 2, 60000, '0%', 'Không ghi chú');
 INSERT INTO ChiTietHDB (MaHoaDon, MaSanPham, SoLuong, ThanhTien, KhuyenMai, GhiChu)
-VALUES ('HD02', 'SP04', 2, 100000, 'Giảm giá 20%', 'Không ghi chú');
+VALUES ('HD02', 'SP04', 2, 100000, '0%', 'Không ghi chú');
 
---Hóa đơn nhập
+-- Bảng HoaDonNhap
 INSERT INTO HoaDonNhap (MaDonNhap, MaNhanVien, MaNhaCungCap, NgayNhap, TongTien)
 VALUES ('HDN01', 'NV01', 'NCC01', '2023-05-01', 200000);
-
 INSERT INTO HoaDonNhap (MaDonNhap, MaNhanVien, MaNhaCungCap, NgayNhap, TongTien)
 VALUES ('HDN02', 'NV02', 'NCC02', '2023-05-02', 300000);
 
---Chi tiết hóa đơn nhập
+-- Bảng ChiTietHDN
 INSERT INTO ChiTietHDN (MaDonNhap, MaSanPham, SoLuong, DonGia, ThanhTien, KhuyenMai)
-VALUES ('HDN01', 'SP03', 10, 20000, 200000, 'Giảm giá 5%');
-
+VALUES ('HDN01', 'SP03', 10, 20000, 200000, '0%');
 INSERT INTO ChiTietHDN (MaDonNhap, MaSanPham, SoLuong, DonGia, ThanhTien, KhuyenMai)
-VALUES ('HDN02', 'SP04', 10, 30000, 300000, 'Giảm giá 10%');
+VALUES ('HDN02', 'SP04', 10, 30000, 300000, '0%');
 
+--trigger cập nhật số lượng sản phẩm khi nhập
+CREATE TRIGGER trg_UpdateSanPhamOnInsertChiTietHDN
+ON ChiTietHDN
+AFTER INSERT
+AS
+BEGIN
+    UPDATE SanPham
+    SET SanPham.SoLuong = SanPham.SoLuong + inserted.SoLuong
+    FROM SanPham
+    INNER JOIN inserted ON SanPham.MaSanPham = inserted.MaSanPham;
+END;
 
+--trigger khi bán
+CREATE TRIGGER trg_UpdateSanPhamOnInsertChiTietHDB
+ON ChiTietHDB
+AFTER INSERT
+AS
+BEGIN
+    UPDATE SanPham
+    SET SanPham.SoLuong = SanPham.SoLuong - inserted.SoLuong
+    FROM SanPham
+    INNER JOIN inserted ON SanPham.MaSanPham = inserted.MaSanPham;
+END;
 
-
+--Giá nhập được update theo đơn giá
+CREATE TRIGGER trg_UpdateGiaNhapOnInsertChiTietHDN
+ON ChiTietHDN
+AFTER INSERT
+AS
+BEGIN
+    UPDATE SanPham
+    SET SanPham.GiaNhap = inserted.DonGia
+    FROM SanPham
+    INNER JOIN inserted ON SanPham.MaSanPham = inserted.MaSanPham;
+END;
 
