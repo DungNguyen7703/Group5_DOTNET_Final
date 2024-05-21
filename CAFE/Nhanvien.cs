@@ -15,6 +15,13 @@ namespace CAFE
         public Nhanvien()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.StartPosition = FormStartPosition.CenterParent;
+        }
+
+        private void Nhanvien_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

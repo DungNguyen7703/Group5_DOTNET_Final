@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CAFE
 {
-    public partial class Hoadonban : Form
+    public partial class HoadonBan : Form
     {
-        public Hoadonban()
+        public HoadonBan()
         {
             InitializeComponent();
+        }
+
+        private void HoadonBan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

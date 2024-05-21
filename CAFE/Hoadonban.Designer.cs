@@ -1,6 +1,6 @@
 ﻿namespace CAFE
 {
-    partial class Hoadonban
+    partial class HoadonBan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // HoadonBan
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Hoadonban";
+            this.Name = "HoadonBan";
+            this.Text = "HoadonBan";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HoadonBan_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
