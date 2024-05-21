@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89E4251F-845F-441D-B7F8-A474119876BC}</ProjectGuid>
+    <ProjectGuid>{37DCF053-1655-449A-AE8B-BD79CF4C8032}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CAFE</RootNamespace>
     <AssemblyName>CAFE</AssemblyName>
@@ -52,23 +52,31 @@
     <Compile Include="Ban.Designer.cs">
       <DependentUpon>Ban.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoadonban.cs">
+    <Compile Include="CLass\Functions.cs" />
+    <Compile Include="HoadonBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoadonban.Designer.cs">
-      <DependentUpon>Hoadonban.cs</DependentUpon>
+    <Compile Include="HoadonBan.Designer.cs">
+      <DependentUpon>HoadonBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoadonnhap.cs">
+    <Compile Include="HoadonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoadonnhap.Designer.cs">
-      <DependentUpon>Hoadonnhap.cs</DependentUpon>
+    <Compile Include="HoadonNhap.Designer.cs">
+      <DependentUpon>HoadonNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Khachhang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Khachhang.Designer.cs">
       <DependentUpon>Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiProperties.cs" />
+    <Compile Include="Nhacungcap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhacungcap.Designer.cs">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
     </Compile>
     <Compile Include="Nhanvien.cs">
       <SubType>Form</SubType>
@@ -82,20 +90,50 @@
     <Compile Include="Sanpham.Designer.cs">
       <DependentUpon>Sanpham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thongke.Designer.cs">
+      <DependentUpon>Thongke.cs</DependentUpon>
+    </Compile>
     <Compile Include="Timkiem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Timkiem.Designer.cs">
       <DependentUpon>Timkiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrangChu.cs">
+    <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrangChu.Designer.cs">
-      <DependentUpon>TrangChu.cs</DependentUpon>
+    <Compile Include="Trangchu.Designer.cs">
+      <DependentUpon>Trangchu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HoadonBan.resx">
+      <DependentUpon>HoadonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoadonNhap.resx">
+      <DependentUpon>HoadonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khachhang.resx">
+      <DependentUpon>Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhacungcap.resx">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhanvien.resx">
+      <DependentUpon>Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thongke.resx">
+      <DependentUpon>Thongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timkiem.resx">
+      <DependentUpon>Timkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trangchu.resx">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,10 +142,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TrangChu.resx">
-      <DependentUpon>TrangChu.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +156,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_menu_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_multiply_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shopping_cart_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-coffee-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiply_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dropdown-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-statistics-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-supply-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-restaurant-table-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
