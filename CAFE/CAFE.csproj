@@ -105,6 +105,14 @@
     <Compile Include="Nhanvien.Designer.cs">
       <DependentUpon>Nhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLCafeDataSet.cs">
+      <DependentUpon>QLCafeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLCafeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCafeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Sanpham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +143,8 @@
     <EmbeddedResource Include="Nhanvien.resx">
       <DependentUpon>Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BaocaoBan.rdlc" />
+    <EmbeddedResource Include="Reports\BaocaoNhap.rdlc" />
     <EmbeddedResource Include="Timkiem.resx">
       <DependentUpon>Timkiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +176,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLCafeDataSet.xsc">
+      <DependentUpon>QLCafeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCafeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCafeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCafeDataSet.xss">
+      <DependentUpon>QLCafeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\icons8_home_32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +244,7 @@
     <None Include="Resources\icons8-bill-24.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-filter-30.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -237,5 +259,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@ namespace CAFE.CLass
           
         public static void connect()
         {
-            connString = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=QLCafe;Integrated Security=True;Encrypt=False";
+            connString = @"Data Source=DungND53\SQLEXPRESS;Initial Catalog=QLCafe;Integrated Security=True;Encrypt=False";
             conn = null;
             conn = new SqlConnection(connString);
             conn.Open();
@@ -76,6 +76,22 @@ namespace CAFE.CLass
             cbo.ValueMember = ma;	//Trường giá trị
             cbo.DisplayMember = ten;	//Trường hiển thị
         }
+        public static bool IsDate(string d)
+        {
+            string[] parts = d.Split('/');
+            if ((Convert.ToInt32(parts[0]) >= 1) && (Convert.ToInt32(parts[0]) <= 31) &&
+(Convert.ToInt32(parts[1]) >= 1) && (Convert.ToInt32(parts[1]) <= 12) && (Convert.ToInt32(parts[2]) >= 1900))
+                return true;
+            else
+                return false;
+        }
+        public static string ConvertDateTime(string d)
+        {
+            string[] parts = d.Split('/');
+            string dt = String.Format("{0}/{1}/{2}", parts[1], parts[0], parts[2]);
+            return dt;
+        }
+
         public static string GetFieldValues(string sql)
         {
             string ma = "";
@@ -87,6 +103,5 @@ namespace CAFE.CLass
             reader.Close();
             return ma;
         }
-
     }
 }

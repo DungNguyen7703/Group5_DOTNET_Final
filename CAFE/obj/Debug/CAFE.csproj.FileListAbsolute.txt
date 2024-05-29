@@ -65,6 +65,6 @@ D:\E\C#\CAFE\CAFE\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
 D:\E\C#\CAFE\CAFE\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\E\C#\CAFE\CAFE\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\E\C#\CAFE\CAFE\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.Baocao.resources
 D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.csproj.Up2Date
 D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.Hoadon.resources
+D:\E\C#\CAFE\CAFE\obj\Debug\CAFE.Baocao.resources

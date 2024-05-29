@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSidebar = new System.Windows.Forms.PictureBox();
-            this.btnCLose = new System.Windows.Forms.PictureBox();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnHome = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
@@ -56,7 +55,6 @@
             this.sidebarTrans = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCLose)).BeginInit();
             this.sideBar.SuspendLayout();
             this.pnHome.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -74,7 +72,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.btnSidebar);
-            this.panel1.Controls.Add(this.btnCLose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -92,17 +89,6 @@
             this.btnSidebar.TabIndex = 1;
             this.btnSidebar.TabStop = false;
             this.btnSidebar.Click += new System.EventHandler(this.btnSidebar_Click);
-            // 
-            // btnCLose
-            // 
-            this.btnCLose.Image = global::CAFE.Properties.Resources.multiply_48px;
-            this.btnCLose.Location = new System.Drawing.Point(951, 3);
-            this.btnCLose.Name = "btnCLose";
-            this.btnCLose.Size = new System.Drawing.Size(40, 34);
-            this.btnCLose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCLose.TabIndex = 9;
-            this.btnCLose.TabStop = false;
-            this.btnCLose.Click += new System.EventHandler(this.btnCLose_Click);
             // 
             // sideBar
             // 
@@ -385,7 +371,6 @@
             this.Load += new System.EventHandler(this.Trangchu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCLose)).EndInit();
             this.sideBar.ResumeLayout(false);
             this.pnHome.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
@@ -423,7 +408,6 @@
         private System.Windows.Forms.Timer sidebarTrans;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btnSup;
-        private System.Windows.Forms.PictureBox btnCLose;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.Panel panel10;

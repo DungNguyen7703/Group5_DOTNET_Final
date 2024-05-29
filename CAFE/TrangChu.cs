@@ -146,7 +146,6 @@ namespace CAFE
                 kh.FormClosed += Kh_FormClosed;
                 kh.MdiParent = this;
                 kh.Dock = DockStyle.Fill;
-                ActiveMdiChild.Close();
                 kh.Show();
             }
             else
@@ -233,7 +232,7 @@ namespace CAFE
 
         private void Trangchu_Load(object sender, EventArgs e)
         {
-
+            Functions.connect();
         }
 
 
