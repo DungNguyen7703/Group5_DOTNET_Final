@@ -21,24 +21,21 @@ namespace CAFE
         Nhanvien nv;
         Khachhang kh;
         Sanpham sp;
-        HoadonBan hoadonBan;
-        HoadonNhap hoadonNhap;
-        BaocaoBan tk;
+        Hoadon hoadon;
         Timkiem Timkiem;
-        BaocaoBan BCban;
-        BaocaoNhap BCnhap;
+        Baocao Baocao;
 
         public Trangchu()
         {
             InitializeComponent();
             mdiProp();
         }
-        
+
         private void mdiProp()
         {
             this.SetBevel(false);
-            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232,234,237);
-        }   
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
+        }
         private void menuTrans_Tick(object sender, EventArgs e)
         {
             if (menuExpand == false)
@@ -84,8 +81,9 @@ namespace CAFE
                     sidebarTrans.Stop();
                     sidebarExpand = true;
                 }
-/*                pnHome.Width= pnDash.Width = pnList.Width = pnImport.Width = pnBills.Width = pnTable.Width = sideBar.Width;
-*/            }
+                /*                pnHome.Width= pnDash.Width = pnList.Width = pnImport.Width = pnBills.Width = pnTable.Width = sideBar.Width;
+                */
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -116,7 +114,7 @@ namespace CAFE
 
         private void btnSidebar_Click(object sender, EventArgs e)
         {
-            sidebarTrans.Start();   
+            sidebarTrans.Start();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -148,7 +146,6 @@ namespace CAFE
                 kh.FormClosed += Kh_FormClosed;
                 kh.MdiParent = this;
                 kh.Dock = DockStyle.Fill;
-                ActiveMdiChild.Close();
                 kh.Show();
             }
             else
@@ -185,17 +182,17 @@ namespace CAFE
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-/*            if (trangchu == null)
-            {
-                trangchu = new Trangchu();
-                trangchu.FormClosed += Trangchu_FormClosed;
-                trangchu.MdiParent = trangchu;
-                trangchu.Show();
-            }
-            else
-            {
-                trangchu.Activate();
-            }*/
+            /*            if (trangchu == null)
+                        {
+                            trangchu = new Trangchu();
+                            trangchu.FormClosed += Trangchu_FormClosed;
+                            trangchu.MdiParent = trangchu;
+                            trangchu.Show();
+                        }
+                        else
+                        {
+                            trangchu.Activate();
+                        }*/
         }
 
         private void Trangchu_FormClosed(object sender, FormClosedEventArgs e)
@@ -203,27 +200,26 @@ namespace CAFE
             trangchu = null;
         }
 
-
-
-        private void Thongke_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            tk = null;
-        }
-
         private void btnBill_Click(object sender, EventArgs e)
         {
-            if (hoadonBan == null )
+            if (hoadon == null)
             {
-                hoadonBan = new HoadonBan();
-                hoadonBan.FormClosed += HoadonBan_FormClosed;
-                hoadonBan.MdiParent = this;
-                hoadonBan.Dock = DockStyle.Fill;
-                hoadonBan.Show();
+                hoadon = new Hoadon();
+                hoadon.FormClosed += HoadonFormClosed;
+                hoadon.MdiParent = this;
+                hoadon.Dock = DockStyle.Fill;
+                hoadon.Show();
 
-            } else
-            {
-                hoadonBan.Activate();
             }
+            else
+            {
+                hoadon.Activate();
+            }
+        }
+
+        private void HoadonFormClosed(object sender, FormClosedEventArgs e)
+        {
+            hoadon = null;
         }
 
         private void sideBar_Paint(object sender, PaintEventArgs e)
@@ -231,37 +227,14 @@ namespace CAFE
             sideBar.BringToFront();
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            if (hoadonNhap == null)
-            {
-                hoadonNhap = new HoadonNhap();
-                hoadonNhap.FormClosed += HoadonNhap_FormClosed;
-                hoadonNhap.MdiParent = this;
-                hoadonNhap.Dock = DockStyle.Fill;
-                hoadonNhap.Show();
-            }
-            else
-            {
-                hoadonNhap.Activate();
-            }
 
-        }
-
-        private void HoadonNhap_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            hoadonNhap = null;
-        }
 
 
         private void Trangchu_Load(object sender, EventArgs e)
         {
+            Functions.connect();
+        }
 
-        }
-        private void HoadonBan_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            hoadonBan = null;
-        }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
@@ -284,78 +257,30 @@ namespace CAFE
             Timkiem = null;
         }
 
-        private void btnbaocaoban_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            if (BCban == null)
-            {
-                BCban = new BaocaoBan();
-                BCban.FormClosed += BCban_FormClosed;
-                BCban.MdiParent = this;
-                BCban.Dock = DockStyle.Fill;
-                BCban.Show();
-            }
-            else
-            {
-                BCban.Activate();
-            }
-        }
 
-        private void BCban_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            BCban = null;
-        }
-
-        private void btnbaocao_Click(object sender, EventArgs e)
-        {
-            baocaoTrans.Start();
-        }
-
-        private void baocaoTrans_Tick(object sender, EventArgs e)
-        {
-            if ( menuExpand == false)
-            {
-                baocaoExpand.Height += 10;
-                if (baocaoExpand.Height >= 172)
-                {
-                    baocaoTrans.Stop();
-                    menuExpand = true;
-                }
-            }
-            else
-            {
-                baocaoExpand.Height -= 10;
-                if (baocaoExpand.Height <= 52)
-                {
-                    baocaoTrans.Stop();
-                    menuExpand = false;
-                }
-            }
         }
 
         private void bthbaocaonhap_Click(object sender, EventArgs e)
         {
-            if (BCnhap == null)
+            if (Baocao == null)
             {
-                BCnhap = new BaocaoNhap();
-                BCnhap.FormClosed += BCnhap_FormClosed;
-                BCnhap.MdiParent = this;
-                BCnhap.Dock = DockStyle.Fill;
-                BCnhap.Show();
+                Baocao = new Baocao();
+                Baocao.FormClosed += Baocao_FormClosed;
+                Baocao.MdiParent = this;
+                Baocao.Dock = DockStyle.Fill;
+                Baocao.Show();
             }
             else
             {
-                BCnhap.Activate();
+                Baocao.Activate();
             }
         }
 
-        private void BCnhap_FormClosed(object sender, FormClosedEventArgs e)
+        private void Baocao_FormClosed(object sender, FormClosedEventArgs e)
         {
-            BCnhap = null;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            Baocao = null;
         }
     }
 }
