@@ -933,7 +933,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else sl = Convert.ToDouble(txtsoluonghdn.Text);
             if (txtgiamgiahdn.Text == "")
                 gg = 0;
-            else gg = Convert.ToDouble(txtgiamgiahdn.Text);
+            else gg = Convert.ToDouble(txtgiamgiahdn.Text.Replace("%", ""));
             if (txtdongianhap.Text == "")
                 dg = 0;
             else dg = Convert.ToDouble(txtdongianhap.Text);
@@ -950,7 +950,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else sl = Convert.ToDouble(txtsoluonghdn.Text);
             if (txtgiamgiahdn.Text == "")
                 gg = 0;
-            else gg = Convert.ToDouble(txtgiamgiahdn.Text);
+            else gg = Convert.ToDouble(txtgiamgiahdn.Text.Replace("%", ""));
             if (txtdongianhap.Text == "")
                 dg = 0;
             else dg = Convert.ToDouble(txtdongianhap.Text);
