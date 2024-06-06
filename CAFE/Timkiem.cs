@@ -87,9 +87,7 @@ namespace CAFE
             dgridSanpham.Columns[1].HeaderText = "Tên sản phẩm";
             dgridSanpham.Columns[2].HeaderText = "Mã loại";
             dgridSanpham.Columns[3].HeaderText = "Số lượng";
-            //dgridSanpham.Columns[4].HeaderText = "Giá nhập";
             dgridSanpham.Columns[4].HeaderText = "Giá bán";
-            //dgridSanpham.Columns[6].HeaderText = "Mã công dụng";
             dgridSanpham.AllowUserToAddRows = false;
             dgridSanpham.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
