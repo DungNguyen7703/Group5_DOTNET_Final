@@ -140,11 +140,17 @@
     <EmbeddedResource Include="Hoadon.resx">
       <DependentUpon>Hoadon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Khachhang.resx">
+      <DependentUpon>Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nhanvien.resx">
       <DependentUpon>Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BaocaoBan.rdlc" />
     <EmbeddedResource Include="Reports\BaocaoNhap.rdlc" />
+    <EmbeddedResource Include="Sanpham.resx">
+      <DependentUpon>Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Timkiem.resx">
       <DependentUpon>Timkiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-filter-30.png" />
+    <None Include="Resources\Beige Modern Cafe Banner.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

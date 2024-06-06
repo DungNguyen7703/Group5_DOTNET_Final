@@ -30,18 +30,27 @@ namespace CAFE
             InitializeComponent();
             mdiProp();
         }
-
+        private void close_form(Form form)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f != form)
+                {
+                    f.Close();
+                }
+            }
+        }
         private void mdiProp()
         {
             this.SetBevel(false);
-            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
+/*            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);*/
         }
         private void menuTrans_Tick(object sender, EventArgs e)
         {
             if (menuExpand == false)
             {
                 pnList.Height += 20;
-                if (pnList.Height >= 276)
+                if (pnList.Height >= 228)
                 {
                     menuTrans.Stop();
                     menuExpand = true;
@@ -50,7 +59,7 @@ namespace CAFE
             else
             {
                 pnList.Height -= 20;
-                if (pnList.Height <= 54)
+                if (pnList.Height <= 50)
                 {
                     menuTrans.Stop();
                     menuExpand = false;
@@ -66,8 +75,8 @@ namespace CAFE
         {
             if (sidebarExpand)
             {
-                sideBar.Width -= 5;
-                if (sideBar.Width <= 65)
+                sideBar.Width -= 10;
+                if (sideBar.Width <= 66)
                 {
                     sidebarTrans.Stop();
                     sidebarExpand = false;
@@ -75,13 +84,13 @@ namespace CAFE
             }
             else
             {
-                sideBar.Width += 5;
-                if (sideBar.Width >= 208)
+                sideBar.Width += 10;
+                if (sideBar.Width >= 198)
                 {
                     sidebarTrans.Stop();
                     sidebarExpand = true;
                 }
-                /*                pnHome.Width= pnDash.Width = pnList.Width = pnImport.Width = pnBills.Width = pnTable.Width = sideBar.Width;
+                /*pnHome.Width= pnDash.Width = pnList.Width = pnImport.Width = pnBills.Width = pnTable.Width = sideBar.Width;
                 */
             }
         }
@@ -100,6 +109,7 @@ namespace CAFE
                 nv.MdiParent = this;
                 nv.Dock = DockStyle.Fill;
                 nv.Show();
+                close_form(nv);
             }
             else
             {
@@ -126,6 +136,7 @@ namespace CAFE
                 sp.MdiParent = this;
                 sp.Dock = DockStyle.Fill;
                 sp.Show();
+                close_form(sp);
             }
             else
             {
@@ -147,6 +158,7 @@ namespace CAFE
                 kh.MdiParent = this;
                 kh.Dock = DockStyle.Fill;
                 kh.Show();
+                close_form(kh);
             }
             else
             {
@@ -168,6 +180,7 @@ namespace CAFE
                 nv.MdiParent = this;
                 nv.Dock = DockStyle.Fill;
                 nv.Show();
+                close_form(nv);
             }
             else
             {
@@ -182,17 +195,10 @@ namespace CAFE
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            /*            if (trangchu == null)
-                        {
-                            trangchu = new Trangchu();
-                            trangchu.FormClosed += Trangchu_FormClosed;
-                            trangchu.MdiParent = trangchu;
-                            trangchu.Show();
-                        }
-                        else
-                        {
-                            trangchu.Activate();
-                        }*/
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
         }
 
         private void Trangchu_FormClosed(object sender, FormClosedEventArgs e)
@@ -209,6 +215,7 @@ namespace CAFE
                 hoadon.MdiParent = this;
                 hoadon.Dock = DockStyle.Fill;
                 hoadon.Show();
+                close_form(hoadon);
 
             }
             else
@@ -245,6 +252,7 @@ namespace CAFE
                 Timkiem.MdiParent = this;
                 Timkiem.Dock = DockStyle.Fill;
                 Timkiem.Show();
+                close_form(Timkiem);
             }
             else
             {
@@ -271,6 +279,7 @@ namespace CAFE
                 Baocao.MdiParent = this;
                 Baocao.Dock = DockStyle.Fill;
                 Baocao.Show();
+                close_form(Baocao);
             }
             else
             {

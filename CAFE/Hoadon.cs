@@ -718,7 +718,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             btnboquahdn.Enabled = true;
             cbbmahdn.Text = "";
             ResetValue();
-            txtmahoadonnhap.Text = Functions.CreateKey("HDN");
+            txtmahoadonnhap.Text = Functions.CreateHDNKey();
             mskngaynhap.Text = DateTime.Now.ToShortDateString();
             Load_DataGridView();
         }

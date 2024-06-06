@@ -37,6 +37,7 @@ namespace CAFE
             Functions.FillCombo("SELECT macongdung,tencongdung FROM congdung", cbbmacongdung, "macongdung", "tencongdung");
             cbbmaloai.SelectedIndex = -1;
             cbbmacongdung.SelectedIndex = -1;
+            txtdongiaban.ReadOnly = true;
             ResetValue();
         }
         private void Load_DataGridView()
@@ -335,5 +336,24 @@ $"(N'{txtmasp.Text.Trim()}',N'{txttensp.Text.Trim()}',N'{cbbmaloai.SelectedValue
             cbbmaloai.Enabled = true;
             cbbmacongdung.Enabled = true;
         }
+
+        private void txtdongiaban_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtdongianhap_TextChanged(object sender, EventArgs e)
+        {
+            string input = txtdongianhap.Text;
+            int number;
+            if (int.TryParse(input, out number))
+            {
+                txtdongiaban.Text = (number + (number * 0.1)).ToString();
+            }
+            else
+            {
+                txtdongiaban.Text = "0";
+            }
+        }
+        }
     }
-}

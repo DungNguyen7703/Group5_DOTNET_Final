@@ -17,7 +17,7 @@ namespace CAFE.CLass
           
         public static void connect()
         {
-            connString = "Data Source=DUYPC\\SQLEXPRESS;Initial Catalog=QLCafe;Integrated Security=True;Encrypt=False";
+            connString = @"Data Source=DungND53\SQLEXPRESS;Initial Catalog=QLCafe;Integrated Security=True;Encrypt=False";
             conn = new SqlConnection();
             conn.ConnectionString = connString;
             conn.Open();
@@ -63,6 +63,16 @@ namespace CAFE.CLass
                 return true;
             else return false;
         }
+        public static bool IsDate(string d)
+        {
+            string[] parts = d.Split('/');
+            if ((Convert.ToInt32(parts[0]) >= 1) && (Convert.ToInt32(parts[0]) <= 31) &&
+(Convert.ToInt32(parts[1]) >= 1) && (Convert.ToInt32(parts[1]) <= 12) && (Convert.ToInt32(parts[2]) >= 1900))
+                return true;
+            else
+                return false;
+        }
+
         public static void FillCombo(string sql, ComboBox cbo, string ma, string ten)
         {
             SqlDataAdapter Mydata = new SqlDataAdapter(sql, Functions.conn);
@@ -100,6 +110,9 @@ MessageBoxButtons.OK, MessageBoxIcon.Stop);
             cmd.Dispose();
             cmd = null;
         }
+
+
+
         private static string GetLastCustomerID()
         {
             string query = "SELECT TOP 1 MaKhachHang FROM Khachhang ORDER BY MaKhachHang DESC";
@@ -123,17 +136,38 @@ MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
         private static string GetLastHDBID()
         {
-            string query = "SELECT TOP 1 Mahoadon FROM Hoadon ORDER BY Mahoadon DESC";
+            string query = "SELECT TOP 1 MaHoaDon FROM Hoadon ORDER BY MahoaDon DESC";
             SqlCommand cmd = new SqlCommand(query, conn);
             object result = cmd.ExecuteScalar();
             return result != null ? result.ToString() : null;
+        }
+        private static string GetLastHDNID()
+        {
+            string query = "SELECT TOP 1 MaDonNhap FROM HoadonNhap ORDER BY MaDonNhap DESC";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            object result = cmd.ExecuteScalar();
+            return result != null ? result.ToString() : null;
+        }
+        public static string CreateHDNKey()
+        {
+            string lastHDNID = GetLastHDNID();
+            if (string.IsNullOrEmpty(lastHDNID))
+            {
+                return "HDN01"; // Nếu không có hoadon nào, bắt đầu từ NV01
+            }
+            // Tách phần số từ mã nhân viên
+            int soPart = int.Parse(lastHDNID.Substring(3));
+            soPart++; // Tăng số lên 1
+
+            // Tạo mã mới
+            return "HDN" + soPart.ToString("D2");
         }
         public static string CreateHDBKey()
         {
             string lastHDBID = GetLastHDBID();
             if (string.IsNullOrEmpty(lastHDBID))
             {
-                return "KH01"; // Nếu không có nhân viên nào, bắt đầu từ NV01
+                return "HD01"; // Nếu không có hoadon nào, bắt đầu từ NV01
             }
             // Tách phần số từ mã nhân viên
             int soPart = int.Parse(lastHDBID.Substring(2));

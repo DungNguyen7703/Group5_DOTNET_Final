@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trangchu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSidebar = new System.Windows.Forms.PictureBox();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
@@ -37,8 +38,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.bthbaocaonhap = new System.Windows.Forms.Button();
             this.pnList = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnSup = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnEmp = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -59,7 +58,6 @@
             this.pnHome.SuspendLayout();
             this.panel10.SuspendLayout();
             this.pnList.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,12 +68,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(223)))), ((int)(((byte)(209)))));
             this.panel1.Controls.Add(this.btnSidebar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 40);
+            this.panel1.Size = new System.Drawing.Size(1156, 40);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -92,7 +90,7 @@
             // 
             // sideBar
             // 
-            this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(79)))), ((int)(((byte)(42)))));
             this.sideBar.Controls.Add(this.pnHome);
             this.sideBar.Controls.Add(this.panel10);
             this.sideBar.Controls.Add(this.pnList);
@@ -115,7 +113,7 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(79)))), ((int)(((byte)(42)))));
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = global::CAFE.Properties.Resources.icons8_home_32;
@@ -141,7 +139,7 @@
             // 
             // bthbaocaonhap
             // 
-            this.bthbaocaonhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.bthbaocaonhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(79)))), ((int)(((byte)(42)))));
             this.bthbaocaonhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bthbaocaonhap.ForeColor = System.Drawing.Color.White;
             this.bthbaocaonhap.Image = global::CAFE.Properties.Resources.icons8_statistics_32;
@@ -158,8 +156,7 @@
             // 
             // pnList
             // 
-            this.pnList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.pnList.Controls.Add(this.panel12);
+            this.pnList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(46)))), ((int)(((byte)(21)))));
             this.pnList.Controls.Add(this.panel6);
             this.pnList.Controls.Add(this.panel7);
             this.pnList.Controls.Add(this.panel5);
@@ -169,32 +166,6 @@
             this.pnList.Name = "pnList";
             this.pnList.Size = new System.Drawing.Size(200, 50);
             this.pnList.TabIndex = 8;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btnSup);
-            this.panel12.Location = new System.Drawing.Point(0, 222);
-            this.panel12.Margin = new System.Windows.Forms.Padding(0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 54);
-            this.panel12.TabIndex = 22;
-            // 
-            // btnSup
-            // 
-            this.btnSup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.btnSup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSup.ForeColor = System.Drawing.Color.White;
-            this.btnSup.Image = global::CAFE.Properties.Resources.icons8_supply_30;
-            this.btnSup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSup.Location = new System.Drawing.Point(-5, -12);
-            this.btnSup.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSup.Name = "btnSup";
-            this.btnSup.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSup.Size = new System.Drawing.Size(216, 77);
-            this.btnSup.TabIndex = 3;
-            this.btnSup.Text = "    Nhà cung cấp";
-            this.btnSup.UseVisualStyleBackColor = false;
-            this.btnSup.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel6
             // 
@@ -207,7 +178,7 @@
             // 
             // btnEmp
             // 
-            this.btnEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.btnEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(46)))), ((int)(((byte)(21)))));
             this.btnEmp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEmp.ForeColor = System.Drawing.Color.White;
             this.btnEmp.Image = global::CAFE.Properties.Resources.icons8_employee_50;
@@ -233,7 +204,7 @@
             // 
             // btnCus
             // 
-            this.btnCus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.btnCus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(46)))), ((int)(((byte)(21)))));
             this.btnCus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCus.ForeColor = System.Drawing.Color.White;
             this.btnCus.Image = global::CAFE.Properties.Resources.icons8_customer_50;
@@ -258,7 +229,7 @@
             // 
             // btnProduct
             // 
-            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(46)))), ((int)(((byte)(21)))));
             this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = global::CAFE.Properties.Resources.icons8_coffee_48;
@@ -283,7 +254,7 @@
             // 
             // btnList
             // 
-            this.btnList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(79)))), ((int)(((byte)(42)))));
             this.btnList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnList.ForeColor = System.Drawing.Color.White;
             this.btnList.Image = global::CAFE.Properties.Resources.icons8_dropdown_30;
@@ -308,7 +279,7 @@
             // 
             // btnBill
             // 
-            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(79)))), ((int)(((byte)(42)))));
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.Image = global::CAFE.Properties.Resources.icons8_bill_30;
@@ -332,7 +303,7 @@
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnTimkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(79)))), ((int)(((byte)(42)))));
             this.btnTimkiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimkiem.ForeColor = System.Drawing.Color.White;
             this.btnTimkiem.Image = global::CAFE.Properties.Resources.icons8_search_30;
@@ -361,13 +332,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(994, 691);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::CAFE.Properties.Resources.Beige_Modern_Cafe_Banner;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1156, 691);
             this.Controls.Add(this.sideBar);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
+            this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Trangchu";
-            this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.Trangchu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSidebar)).EndInit();
@@ -375,7 +350,6 @@
             this.pnHome.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.pnList.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -406,8 +380,6 @@
         private System.Windows.Forms.Panel pnBills;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Timer sidebarTrans;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button btnSup;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.Panel panel10;

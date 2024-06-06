@@ -44,5 +44,26 @@ namespace CAFE.Properties {
                 return ((string)(this["QLCafeConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        public global::System.Drawing.Color header {
+            get {
+                return ((global::System.Drawing.Color)(this["header"]));
+            }
+            set {
+                this["header"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        public global::System.Drawing.Color header1 {
+            get {
+                return ((global::System.Drawing.Color)(this["header1"]));
+            }
+        }
     }
 }
