@@ -274,29 +274,6 @@ cboMahang.SelectedValue + "'";
             txtGiamgia.Text = "0";
             txtThanhtien.Text = "0";
         }
-        private void DataGridViewChitiet_CellDoubleClick(object sender,DataGridViewCellEventArgs e)
-        {
-            string mahang;
-            Double Thanhtien;
-            if (tblCTHDB.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK,
-MessageBoxIcon.Information);
-                return;
-            }
-            if ((MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo",
-MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
-            {
-                //Xóa hàng và cập nhật lại số lượng hàng 
-                mahang = DataGridViewChitiet.CurrentRow.Cells["Masanpham"].Value.ToString();
-                DelHang(txtMahoadonban.Text, mahang);
-                // Cập nhật lại tổng tiền cho hóa đơn bán
-                Thanhtien = Convert.ToDouble(DataGridViewChitiet.CurrentRow.
-Cells["Thanhtien"].Value.ToString());
-                DelUpdateTongtien(txtMahoadonban.Text, Thanhtien);
-                Load_DataGridViewChitiet();
-            }
-        }
         private void DelHang(string Mahoadon, string Mahang)
         {
             Double s, sl, SLcon;
@@ -1161,6 +1138,11 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Load_DataGridView();
                 }
             }
+
+        }
+
+        private void DataGridViewChitiet_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -155,7 +155,7 @@
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1117, 663);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hóa đơn bán";
@@ -431,9 +431,9 @@
             this.groupBox4.Controls.Add(this.txtDongiaban);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 10.125F);
             this.groupBox4.Location = new System.Drawing.Point(19, 101);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(710, 489);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
@@ -499,7 +499,8 @@
             this.DataGridViewChitiet.ShowRowErrors = false;
             this.DataGridViewChitiet.Size = new System.Drawing.Size(682, 256);
             this.DataGridViewChitiet.TabIndex = 8;
-            this.DataGridViewChitiet.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewChitiet_CellDoubleClick);
+            this.DataGridViewChitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewChitiet_CellClick);
+            this.DataGridViewChitiet.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellDoubleClick);
             // 
             // label8
             // 
@@ -717,7 +718,7 @@
             this.frmhdn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.frmhdn.Location = new System.Drawing.Point(4, 30);
             this.frmhdn.Name = "frmhdn";
-            this.frmhdn.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.frmhdn.Padding = new System.Windows.Forms.Padding(3);
             this.frmhdn.Size = new System.Drawing.Size(1117, 663);
             this.frmhdn.TabIndex = 0;
             this.frmhdn.Text = "Hóa đơn nhập";

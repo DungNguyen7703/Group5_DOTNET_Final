@@ -193,20 +193,5 @@ namespace CAFE
             this.BaocaoNhap.LocalReport.Refresh();
             this.BaocaoBan.RefreshReport();
         }
-
-        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

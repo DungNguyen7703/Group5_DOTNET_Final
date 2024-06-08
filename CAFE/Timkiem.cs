@@ -31,7 +31,7 @@ namespace CAFE
             txtSoluong.Enabled = false;
             ResetValues();
             dgridSanpham.DataSource = null;
-            Load_dgridSanpham();
+            /*Load_dgridSanpham();*/
             //// Gắn các hàm xử lý sự kiện cho ToolStripMenuItem
             tabPage1.Click += tabPage1_Click;
             tabPage3.Click += tabPage3_Click;

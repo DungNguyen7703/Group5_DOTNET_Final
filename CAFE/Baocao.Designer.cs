@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bCNhapBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.qLCafeDataSet = new CAFE.QLCafeDataSet();
             this.BC = new System.Windows.Forms.TabControl();
@@ -213,7 +213,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(833, 91);
             this.panel1.TabIndex = 5;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -244,7 +243,6 @@
             this.label4.Size = new System.Drawing.Size(263, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Chọn ngày để xem thống kê";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dateTimePicker3
             // 
@@ -263,7 +261,6 @@
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(125, 29);
             this.dateTimePicker4.TabIndex = 2;
-            this.dateTimePicker4.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
             // 
             // button2
             // 
@@ -279,9 +276,9 @@
             // 
             // BaocaoNhap
             // 
-            reportDataSource2.Name = "BCNhap";
-            reportDataSource2.Value = this.bCNhapBindingSource1;
-            this.BaocaoNhap.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "BCNhap";
+            reportDataSource3.Value = this.bCNhapBindingSource1;
+            this.BaocaoNhap.LocalReport.DataSources.Add(reportDataSource3);
             this.BaocaoNhap.LocalReport.ReportEmbeddedResource = "CAFE.Reports.BaocaoNhap.rdlc";
             this.BaocaoNhap.Location = new System.Drawing.Point(3, 100);
             this.BaocaoNhap.Name = "BaocaoNhap";

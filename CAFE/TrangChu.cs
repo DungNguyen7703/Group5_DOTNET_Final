@@ -80,6 +80,7 @@ namespace CAFE
                 {
                     sidebarTrans.Stop();
                     sidebarExpand = false;
+                    OnBackgroundImageChanged(null);
                 }
             }
             else
@@ -89,6 +90,7 @@ namespace CAFE
                 {
                     sidebarTrans.Stop();
                     sidebarExpand = true;
+                    OnBackgroundImageChanged(null);
                 }
                 /*pnHome.Width= pnDash.Width = pnList.Width = pnImport.Width = pnBills.Width = pnTable.Width = sideBar.Width;
                 */
